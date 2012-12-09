@@ -21,9 +21,7 @@ def get_adc():
 def get_smoothed_adc(number_of_samples=5):
     adc_sum = 0;
     for i in range(number_of_samples):
-        adc = get_adc()
-        print adc
-        adc_sum += adc
+        adc_sum += get_adc()
     return adc_sum / number_of_samples
 
 def get_temperature():
