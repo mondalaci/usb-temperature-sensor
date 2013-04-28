@@ -128,6 +128,8 @@ void SetupHardware(void)
 void SetupTemperatureSensor(void)
 {
     ADMUX = (1 << REFS0) | (1 << MUX2) | (1 << MUX1) | (1 << MUX0);  // The thermistor is wired to the ADC7 pin.
+    // 100001 ADC9
+//    ADMUX = (1 << REFS0) | (1 << MUX5) | (1 << MUX0);  // The thermistor is wired to the ADC9 pin.
     ADCSRA = (1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0);  // Set division factor of 128.
     ADCSRA |= (1 << ADEN);  // Enable the ADC.
 }
