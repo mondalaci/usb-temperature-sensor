@@ -12,8 +12,6 @@ def get_adc():
     ser = serial.Serial('/dev/temperature-sensor')
     ser.write('c')
     (adc_symbol, adc_value) = ser.readline().strip().split()
-#    print adc_symbol
-#    print adc_value
     if adc_symbol != 'c':
         raise Exception('The received measurement symbol is not "c" !')
 
@@ -27,12 +25,10 @@ def get_smoothed_adc(number_of_samples=5):
 
 def get_temperature():
     adc = get_smoothed_adc()
-#    print adc
-#    KELVIN_DIFF = 273.15
-#    T0_K = T0_C + KELVIN_DIFF
-#    voltage = adc*VCC/1023
-#    resistance = R_FIX*VCC/voltage - R_FIX
-#    temperature_k = 1 / (1/T0_K + 1/BETA * math.log(resistance/R0))
-#    temperature_c = temperature_k - KELVIN_DIFF
-#    return temperature_c
-    return adc
+    KELVIN_DIFF = 273.15
+    T0_K = T0_C + KELVIN_DIFF
+    voltage = adc*VCC/1023
+    resistance = R_FIX*VCC/voltage - R_FIX
+    temperature_k = 1 / (1/T0_K + 1/BETA * math.log(resistance/R0))
+    temperature_c = temperature_k - KELVIN_DIFF
+    return temperature_c
