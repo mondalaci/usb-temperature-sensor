@@ -3,6 +3,27 @@ USB Temperature Sensor
 
 This is a USB temperature sensor based on the [Atmega32u4 Breakout+](http://www.ladyada.net/products/atmega32u4breakout/) board of Adafruit Industries.  I used the [Adafruit thermistor guide](http://learn.adafruit.com/thermistor/using-a-thermistor) and the [LUFA library](http://www.fourwalledcubicle.com/LUFA.php) to make this project happen.
 
+Schematic
+---------
+
+    ---------------+
+                5v o------+
+              AREF o------+
+    A           F0 o      |
+    T b         F1 o   10K ohm
+    m r         F4 o  thermistor 
+    e e         F5 o      |
+    g a         F6 o      |
+    a k  F7 (ADC7) o------+
+    3 o         C7 o      |
+    2 u         C6 o      |
+    u t         B7 o     10K
+    4           B6 o   resistor
+                B5 o      |
+                B4 o      |
+               GND o------+
+    ---------------+
+
 Installation
 ------------
 
