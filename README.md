@@ -11,7 +11,7 @@ The following `make` directives are available:
 * `program`: Upload the firmware to the board.
 * `clean`: Clean up all the intermediate files that were created during the build process.
 
-Place `90-temperature-sensor.rules` to `/etc/udev/rules.d` so that udev will create the `dev/temperature-sensor` symlink every time the sensor is plugged in.
+Place `90-temperature-sensor.rules` into `/etc/udev/rules.d` so that udev will create the `dev/temperature-sensor` symlink every time the sensor gets plugged in.
 
 Usage
 -----
