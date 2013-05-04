@@ -9,7 +9,7 @@ Installation
 The following `make` directives are available:
 * `build` (default): Fetch LUFA, copy the firmware source into its directory tree and build the firmware.
 * `program`: Upload the firmware to the board.
-* `clean`: Clean up all the intermediate files that were created during the build process.
+* `clean`: Clean up the intermediate files that were created during the build process.
 
 Place `90-temperature-sensor.rules` into `/etc/udev/rules.d` so that udev will create the `dev/temperature-sensor` symlink every time the sensor gets plugged in.
 
