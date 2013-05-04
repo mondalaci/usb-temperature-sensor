@@ -10,7 +10,7 @@ Schematic
                 5v o------+
               AREF o------+
     A           F0 o      |
-    T b         F1 o   10K ohm
+    T b         F1 o     10K
     m r         F4 o  thermistor 
     e e         F5 o      |
     g a         F6 o      |
