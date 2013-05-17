@@ -37,7 +37,7 @@ Place `90-temperature-sensor.rules` into `/etc/udev/rules.d` so that udev will c
 Usage
 -----
 
-After building and uploading the firmware use `host-utils/get-temperature.py` to retrieve the temperature value.
+After building and uploading the firmware execute `host-utils/get-temperature.py` which will output the temperature value.
 
 Photos
 ------
